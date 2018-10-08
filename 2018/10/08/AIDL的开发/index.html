@@ -93,12 +93,18 @@
 
 
 
-<meta property="og:type" content="website">
-<meta property="og:title" content="像风一样自由">
-<meta property="og:url" content="http://yoursite.com/tags/小米/index.html">
+<meta name="description" content="因为产品要求功能的开发，要做列表中做一个音频播放的功能，但是音频播放一般是放在另外一个Service中完成的，所以根据需求学习了AIDL的开发。 首先新建一个AIDL的文件夹在main目录下AIDL是一个interface的类型     interface IMusicControl {     boolean isPlaying();     void pause();     void sta">
+<meta property="og:type" content="article">
+<meta property="og:title" content="AIDL的开发">
+<meta property="og:url" content="http://yoursite.com/2018/10/08/AIDL的开发/index.html">
 <meta property="og:site_name" content="像风一样自由">
+<meta property="og:description" content="因为产品要求功能的开发，要做列表中做一个音频播放的功能，但是音频播放一般是放在另外一个Service中完成的，所以根据需求学习了AIDL的开发。 首先新建一个AIDL的文件夹在main目录下AIDL是一个interface的类型     interface IMusicControl {     boolean isPlaying();     void pause();     void sta">
+<meta property="og:image" content="http://bmob-cdn-12665.b0.upaiyun.com/2018/10/08/46f51de840e98c0f80b1aa3591cdedef.png">
+<meta property="og:updated_time" content="2018-10-08T06:49:17.420Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="像风一样自由">
+<meta name="twitter:title" content="AIDL的开发">
+<meta name="twitter:description" content="因为产品要求功能的开发，要做列表中做一个音频播放的功能，但是音频播放一般是放在另外一个Service中完成的，所以根据需求学习了AIDL的开发。 首先新建一个AIDL的文件夹在main目录下AIDL是一个interface的类型     interface IMusicControl {     boolean isPlaying();     void pause();     void sta">
+<meta name="twitter:image" content="http://bmob-cdn-12665.b0.upaiyun.com/2018/10/08/46f51de840e98c0f80b1aa3591cdedef.png">
 
 
 
@@ -126,13 +132,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/tags/小米/"/>
+  <link rel="canonical" href="http://yoursite.com/2018/10/08/AIDL的开发/"/>
 
 
 
 
 
-  <title>标签: 小米 | 像风一样自由</title>
+  <title>AIDL的开发 | 像风一样自由</title>
   
 
 
@@ -166,7 +172,7 @@
     
   
 
-  <div class="container sidebar-position-left  ">
+  <div class="container sidebar-position-left page-post-detail ">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -284,44 +290,383 @@
           <div id="content" class="content">
             
 
-  <div id="posts" class="posts-collapse">
-    <div class="collection-title">
-      <h1>小米<small>标签</small>
-      </h1>
-    </div>
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/10/08/AIDL的开发/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="songpeng">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="http://bmob-cdn-12665.b0.upaiyun.com/2017/07/03/db98bdb6403d17e4806da560adcf198c.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="像风一样自由">
+    </span>
 
     
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">AIDL的开发</h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-10-08T13:58:52+08:00">
+                2018-10-08
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/2018/10/08/AIDL的开发/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count disqus-comment-count"
+                        data-disqus-identifier="2018/10/08/AIDL的开发/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+          
+             <span id="/2018/10/08/AIDL的开发/" class="leancloud_visitors" data-flag-title="AIDL的开发">
+               <span class="post-meta-divider">|</span>
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               
+                 <span class="post-meta-item-text">阅读次数 </span>
+               
+                 <span class="leancloud-visitors-count"></span>
+             </span>
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    <div class="post-body" itemprop="articleBody">
+
+      
       
 
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
+      
+        <p>因为产品要求功能的开发，要做列表中做一个音频播放的功能，但是音频播放一般是放在另外一个Service中完成的，所以根据需求学习了AIDL的开发。</p>
+<h5 id="首先新建一个AIDL的文件夹在main目录下"><a href="#首先新建一个AIDL的文件夹在main目录下" class="headerlink" title="首先新建一个AIDL的文件夹在main目录下"></a>首先新建一个AIDL的文件夹在main目录下<img src="http://bmob-cdn-12665.b0.upaiyun.com/2018/10/08/46f51de840e98c0f80b1aa3591cdedef.png"></h5><p>AIDL是一个interface的类型</p>
+<pre><code>    interface IMusicControl {
+    boolean isPlaying();
+    void pause();
+    void start(int position);
+    int getDuration();
+    int getCurrenPostion();
+    void seekTo(int mesc);
+    void create(String url,String audioName);
+    void release();
+    void stop();
+    void unBind();
+}
+</code></pre><p>这个音乐控制类中主要是音频的控制。</p>
+<h5 id="第二步，新建Service"><a href="#第二步，新建Service" class="headerlink" title="第二步，新建Service"></a>第二步，新建Service</h5><p>在Service中新建一个MyBinder的内部类，继承IMusicControl.Stub</p>
+<pre><code>    public class MyBinder extends IMusicControl.Stub implements MediaPlayer.OnPreparedListener, MediaPlayer.OnErrorListener, MediaPlayer.OnCompletionListener, MediaPlayer.OnBufferingUpdateListener {
 
-      <h2 class="post-title">
+    //判断是否处于播放状态
+    public boolean isPlaying() {
+        if (player == null) {
+            return false;
+        }
+        return player.isPlaying();
+    }
+
+    //播放或暂停歌曲
+    public void pause() {
+        MusicService.this.pause();
+    }
+
+    @RequiresApi(api = Build.VERSION_CODES.JELLY_BEAN)
+    public void start(int position) {
+        if (position != -1) {
+            MusicService.this.position = position;
+        }
+        MusicService.this.start();
+    }
+
+    //返回歌曲的长度，单位为毫秒
+    public int getDuration() {
+        if (player == null) {
+            return -1;
+        }
+        return player.getDuration();
+    }
+
+    //返回歌曲目前的进度，单位为毫秒
+    public int getCurrenPostion() {
+        if (player == null) {
+            return -1;
+        }
+        return player.getCurrentPosition();
+    }
+
+    //设置歌曲播放的进度，单位为毫秒
+    public void seekTo(int mesc) {
+        player.seekTo(mesc);
+    }
+
+
+    public void create(final String url, String audioName) {
+        player = new MediaPlayer();
+        try {
+            player.setDataSource(url);
+            //准备资源
+            player.prepareAsync();
+            isCreate = true;
+            player.setOnPreparedListener(MyBinder.this);
+            player.setOnCompletionListener(MyBinder.this);
+            player.setOnErrorListener(MyBinder.this);
+            player.setOnInfoListener(new MediaPlayer.OnInfoListener() {
+                @Override
+                public boolean onInfo(MediaPlayer mp, int what, int extra) {
+                    Log.d(TAG, &quot;onInfo: &quot; + what);
+                    Log.d(TAG, &quot;onInfo: &quot; + extra);
+                    switch (what) {
+                        case MediaPlayer.MEDIA_INFO_BUFFERING_START:
+                            sendPrepare(position);
+                            break;
+                        case MediaPlayer.MEDIA_INFO_BUFFERING_END:
+                            Log.d(TAG, &quot;onInfo: end&quot;);
+                            sendPlay(position);
+                            break;
+                    }
+                    return false;
+                }
+            });
+            player.setOnBufferingUpdateListener(this);
+            if (StringUtil.isNotNull(audioName)) {
+                MusicService.this.audioName = audioName;
+            }
+            startPositionTimer();
+            Log.d(TAG, &quot;create: &quot;);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+
+    }
+
+    public void release() {
+        if (player != null) {
+            if (positionTimer != null) {
+                positionTimer.cancel();
+                positionTimer = null;
+            }
+            player.release();
+        }
+    }
+
+    public void stop() {
+        if (player != null) {
+            if (positionTimer != null) {
+                positionTimer.cancel();
+                positionTimer = null;
+            }
+            player.stop();
+            isStop = true;
+            isCreate = false;
+            cancelNotification();
+            sendStop(position);
+        }
+    }
+
+    @Override
+    public void unBind() throws RemoteException {
+        if (positionTimer != null) {
+            positionTimer.cancel();
+            positionTimer = null;
+        }
+        if (player != null) {
+            if (player.isPlaying()) {
+                player.stop();
+            }
+            player.release();
+            player = null;
+        }
+    }
+
+
+    @Override
+    public void onPrepared(MediaPlayer mp) {
+        if (isCreate) {
+            mp.start();
+            completion = false;
+            sendPlay(position);
+            startNotification();
+            Log.d(TAG, &quot;onPrepared: &quot;);
+        }
+    }
+
+    @Override
+    public boolean onError(MediaPlayer mp, int what, int extra) {
+        Log.d(TAG, &quot;onError: &quot;);
+        if (isStop) {
+            return true;
+        }
+        sendError(position);
+        return true;
+    }
+
+    @Override
+    public void onCompletion(MediaPlayer mp) {
+        if (percent == 100 &amp;&amp; mp.getDuration() &gt; 0) {
+            sendCompletion(position);
+            completion = true;
+            Log.d(TAG, &quot;onCompletion: &quot; + mp.getDuration());
+        }
+    }
+
+
+    @Override
+    public void onBufferingUpdate(MediaPlayer mp, int percent) {
+        MusicService.this.percent = percent;
+    }
+
+}
+</code></pre><p>并且在onBind(Intent intent)方法中初始化MyBinder。然后在AndroidManifest文件中声明Service</p>
+<pre><code>&lt;service
+   android:name=&quot;.app.server.MusicService&quot;
+   android:process=&quot;:music&quot;
+   /&gt;
+</code></pre><p>其中process是另启一个进程。此时新进程Service基本上已经搭建完成，剩下的是调用的事情了。</p>
+<h5 id="第三步-新建一个控制Service的类MediaControl"><a href="#第三步-新建一个控制Service的类MediaControl" class="headerlink" title="第三步 新建一个控制Service的类MediaControl"></a>第三步 新建一个控制Service的类MediaControl</h5><p>在MediaControl类内部新建一个内部类MyConnection实现ServiceConnection接口</p>
+<pre><code>    private class MyConnection implements ServiceConnection {
+
+    //服务启动完成后会进入到这个方法
+    @Override
+    public void onServiceConnected(ComponentName name, IBinder service) {
+        //获得service中的MyBinder
+        iMusicControl = IMusicControl.Stub.asInterface(service);
+    }
+
+    @Override
+    public void onServiceDisconnected(ComponentName name) {
+        iMusicControl = null;
+    }
+}
+</code></pre><p>此时已经基本完成了AIDL的功能，只要通过之前定义的方法通过iMusicControl.方法就可以调用了。</p>
+
+      
+    </div>
+
+    <div>
+      
         
-            <a class="post-title-link" href="/2017/07/13/米UI弹窗的问题/" itemprop="url">
-              
-                <span itemprop="name">米UI弹窗的问题</span>
-              
-            </a>
+
+      
+    </div>
+
+    <div>
+      
         
-      </h2>
+  <div style="padding: 10px 0; margin: 20px auto; width: 90%; text-align: center;">
+    <div>坚持原创技术分享，您的支持将鼓励我继续创作！</div>
+    <button id="rewardButton" disable="enable" onclick="var qr = document.getElementById('QR'); if (qr.style.display === 'none') {qr.style.display='block';} else {qr.style.display='none'}">
+      <span>赏</span>
+    </button>
+    <div id="QR" style="display: none;">
+      
+        <div id="wechat" style="display: inline-block">
+          <img id="wechat_qr" src="/images/wechat-reward-image.jpg" alt="songpeng WeChat Pay"/>
+          <p>微信打赏</p>
+        </div>
+      
+      
+        <div id="alipay" style="display: inline-block">
+          <img id="alipay_qr" src="/images/alipay-reward-image.jpg" alt="songpeng Alipay"/>
+          <p>支付宝打赏</p>
+        </div>
+      
+    </div>
+  </div>
 
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2017-07-13T09:51:00+08:00"
-              content="2017-07-13" >
-          07-13
-        </time>
-      </div>
 
-    </header>
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2017/11/13/Android-SD卡下载的问题/" rel="next" title="Android 4.4 kitkat SD卡下载地址的处理">
+                <i class="fa fa-chevron-left"></i> Android 4.4 kitkat SD卡下载地址的处理
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
   </article>
 
 
-    
-  </div>
 
-  
+    <div class="post-spread">
+      
+    </div>
+  </div>
 
 
           </div>
@@ -329,6 +674,17 @@
 
 
           
+  <div class="comments" id="comments">
+    
+      <div id="disqus_thread">
+        <noscript>
+          Please enable JavaScript to view the
+          <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a>
+        </noscript>
+      </div>
+    
+  </div>
+
 
         </div>
         
@@ -348,8 +704,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview sidebar-panel sidebar-panel-active">
+      <section class="site-overview sidebar-panel">
         <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
           <img class="site-author-image" itemprop="image"
                src="http://bmob-cdn-12665.b0.upaiyun.com/2017/07/03/db98bdb6403d17e4806da560adcf198c.png"
@@ -411,6 +776,22 @@
 
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-5"><a class="nav-link" href="#首先新建一个AIDL的文件夹在main目录下"><span class="nav-text">首先新建一个AIDL的文件夹在main目录下</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#第二步，新建Service"><span class="nav-text">第二步，新建Service</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#第三步-新建一个控制Service的类MediaControl"><span class="nav-text">第三步 新建一个控制Service的类MediaControl</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       
@@ -536,10 +917,10 @@
 
 
   
-    <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.1"></script>
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.1"></script>
 <script type="text/javascript" src="/js/src/post-details.js?v=5.1.1"></script>
 
-  
+
 
   
 
@@ -558,6 +939,18 @@
     
 
     
+      <script type="text/javascript">
+        var disqus_config = function () {
+          this.page.url = 'http://yoursite.com/2018/10/08/AIDL的开发/';
+          this.page.identifier = '2018/10/08/AIDL的开发/';
+          this.page.title = 'AIDL的开发';
+        };
+        var d = document, s = d.createElement('script');
+        s.src = 'https://songpeng.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', '' + +new Date());
+        (d.head || d.body).appendChild(s);
+      </script>
+    
 
   
 
@@ -571,6 +964,8 @@
 
 		_hcwp.push({widget:"Bloggerstream", widget_id: 93257, selector:".hc-comment-count", label: "{\%COUNT%\}" });
 
+		
+		_hcwp.push({widget:"Stream", widget_id: 93257, xid: "2018/10/08/AIDL的开发/"});
 		
 
 		(function() {
