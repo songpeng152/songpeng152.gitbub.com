@@ -93,12 +93,18 @@
 
 
 
-<meta property="og:type" content="website">
-<meta property="og:title" content="像风一样自由">
-<meta property="og:url" content="http://yoursite.com/archives/2017/11/index.html">
+<meta name="description" content="Object中共有11个方法 equals(Object obj)) hashCode()) getClass()) clone()) toString()) notify()) notifyAll()) wait()) wait(long millis)) wait(long millis, int nanos)) finalize())//一个GC的方法  1.equals(Object ob">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Java中Object类的方法解析">
+<meta property="og:url" content="http://yoursite.com/2018/11/27/Java中Object类的方法解析/index.html">
 <meta property="og:site_name" content="像风一样自由">
+<meta property="og:description" content="Object中共有11个方法 equals(Object obj)) hashCode()) getClass()) clone()) toString()) notify()) notifyAll()) wait()) wait(long millis)) wait(long millis, int nanos)) finalize())//一个GC的方法  1.equals(Object ob">
+<meta property="og:image" content="http://bmob-cdn-12665.b0.upaiyun.com/2018/11/26/f4e571ca40b53a60808115b96b484eb9.png">
+<meta property="og:updated_time" content="2018-11-27T06:51:09.080Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="像风一样自由">
+<meta name="twitter:title" content="Java中Object类的方法解析">
+<meta name="twitter:description" content="Object中共有11个方法 equals(Object obj)) hashCode()) getClass()) clone()) toString()) notify()) notifyAll()) wait()) wait(long millis)) wait(long millis, int nanos)) finalize())//一个GC的方法  1.equals(Object ob">
+<meta name="twitter:image" content="http://bmob-cdn-12665.b0.upaiyun.com/2018/11/26/f4e571ca40b53a60808115b96b484eb9.png">
 
 
 
@@ -126,13 +132,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/archives/2017/11/"/>
+  <link rel="canonical" href="http://yoursite.com/2018/11/27/Java中Object类的方法解析/"/>
 
 
 
 
 
-  <title>归档 | 像风一样自由</title>
+  <title>Java中Object类的方法解析 | 像风一样自由</title>
   
 
 
@@ -166,7 +172,7 @@
     
   
 
-  <div class="container sidebar-position-left  page-archive  ">
+  <div class="container sidebar-position-left page-post-detail ">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -284,66 +290,323 @@
           <div id="content" class="content">
             
 
-  <section id="posts" class="posts-collapse">
-    <span class="archive-move-on"></span>
+  <div id="posts" class="posts-expand">
+    
 
-    <span class="archive-page-counter">
-      
-      
-      
-        
-      
-      嗯..! 目前共计 11 篇日志。 继续努力。
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/11/27/Java中Object类的方法解析/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="songpeng">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="http://bmob-cdn-12665.b0.upaiyun.com/2017/07/03/db98bdb6403d17e4806da560adcf198c.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="像风一样自由">
     </span>
 
     
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">Java中Object类的方法解析</h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-11-27T14:48:36+08:00">
+                2018-11-27
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/2018/11/27/Java中Object类的方法解析/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count disqus-comment-count"
+                        data-disqus-identifier="2018/11/27/Java中Object类的方法解析/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+          
+             <span id="/2018/11/27/Java中Object类的方法解析/" class="leancloud_visitors" data-flag-title="Java中Object类的方法解析">
+               <span class="post-meta-divider">|</span>
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               
+                 <span class="post-meta-item-text">阅读次数 </span>
+               
+                 <span class="leancloud-visitors-count"></span>
+             </span>
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    <div class="post-body" itemprop="articleBody">
 
       
       
-      
 
+      
+        <h3 id="Object中共有11个方法"><a href="#Object中共有11个方法" class="headerlink" title="Object中共有11个方法"></a>Object中共有11个方法</h3><ul>
+<li><span id="jump_1"><a href="#jump_equals(">equals(Object obj)</a>)</span></li>
+<li><span id="jump_2"><a href="#jump_hashCode(">hashCode()</a>)</span></li>
+<li><span id="jump_3"><a href="#jump_getClass(">getClass()</a>)</span></li>
+<li><span id="jump_4"><a href="#jump_clone(">clone()</a>)</span></li>
+<li><span id="jump_5"><a href="#jump_toString(">toString()</a>)</span></li>
+<li><span id="jump_6"><a href="#jump_notify(">notify()</a>)</span></li>
+<li><span id="jump_7"><a href="#jump_notifyAll(">notifyAll()</a>)</span></li>
+<li><span id="jump_8"><a href="#jump_wait(">wait()</a>)</span></li>
+<li><span id="jump_9"><a href="#jump_wait(one">wait(long millis)</a>)</span></li>
+<li><span id="jump_10"><a href="#jump_wait(two">wait(long millis, int nanos)</a>)</span></li>
+<li><span id="jump_11"><a href="#jump_finalize(">finalize()</a>)</span>//一个GC的方法</li>
+</ul>
+<h4 id="1-equals-Object-obj"><a href="#1-equals-Object-obj" class="headerlink" title="1.equals(Object obj)"></a><a href="#jump_1"><span id="jump_equals()">1.equals(Object obj)</span></a></h4><p>equals()方法主要用来比对两个对象是否相等，但是在Object中的实现是比较内存地址是否相等，而在在String、Integer中被进行了重写。</p>
+<p>Object中</p>
+<pre><code>public boolean equals(Object obj) {
+    return (this == obj);
+}
+</code></pre><p>String中</p>
+<pre><code>public boolean equals(Object anObject) {
+    if (this == anObject) {
+        return true;
+    }
+    if (anObject instanceof String) {
+        String anotherString = (String)anObject;
+        int n = length();
+        if (n == anotherString.length()) {
+            int i = 0;
+            while (n-- != 0) {
+                if (charAt(i) != anotherString.charAt(i))
+                        return false;
+                i++;
+            }
+            return true;
+        }
+    }
+    return false;
+}
+</code></pre><h4 id="2-hashCode"><a href="#2-hashCode" class="headerlink" title="2.hashCode()"></a><a href="#jump_2"><span id="jump_hashCode()">2.hashCode()</span></a></h4><p>hashCode()方法是native方法</p>
+<p>hashCode()方法主要用来获取对象的哈希值，可以用在HashMap中</p>
+<ul>
+<li>在java程序执行过程中，在一个对象没有被改变的前提下，无论这个对象被调用多少次，hashCode方法都会返回相同的整数值。对象的哈希码没有必要在不同的程序中保持相同的值。</li>
+<li>如果2个对象使用equals方法进行比较并且相同的话，那么这2个对象的hashCode方法的值也必须相等。</li>
+<li>如果根据equals方法，得到两个对象不相等，那么这2个对象的hashCode值不需要必须不相同。但是，不相等的对象的hashCode值不同的话可以提高哈希表的性能（哈希碰撞）。</li>
+</ul>
+<p>String的hashCode()的计算方法：s[0]<em>31^(n-1) + s[1]</em>31^(n-2) + … + s[n-1]</p>
+<pre><code>public int hashCode() {
+    int h = hash;
+    final int len = length();
+    if (h == 0 &amp;&amp; len &gt; 0) {
+        for (int i = 0; i &lt; len; i++) {
+            h = 31 * h + charAt(i);
+        }
+        hash = h;
+    }
+    return h;
+}
+</code></pre><p>比如”zg”的hashCode = 122<em>31^1 + 103 = 3885， “zgjy”的hashCode = 122</em>31^3 + 103 <em> 31^2 + 106 </em> 31^1+ 121 = 3736892 (‘z’的ascii码为122,’g’的ascii为103，’j’的ascii码为106，’y’的ascii码为121)</p>
+<p><strong>如果2个对象的equals方法相等，那么他们的hashCode值也必须相等，反之，如果2个对象hashCode值相等，但是equals不相等，这样会影响性能，所以还是建议2个方法都一起重写。</strong></p>
+<h4 id="3-getClass"><a href="#3-getClass" class="headerlink" title="3.getClass()"></a><a href="#jump_3"><span id="jump_getClass()">3.getClass()</span></a></h4><p>getClass()是一个final方法，不允许子类重写，并且也是一个native方法。<br>返回当前运行时对象的Class对象，注意这里是运行时，比如以下代码中n是一个Number类型的实例，但是java中数值默认是Integer类型，所以getClass方法返回的是java.lang.Integer：</p>
+<pre><code>Number n = 0;
+Class&lt;? extends Number&gt; c= n.getClass();//java.lang.Integer
+</code></pre><h4 id="4-clone"><a href="#4-clone" class="headerlink" title="4.clone()"></a><a href="#jump_4"><span id="jump_clone()">4.clone()</span></a></h4><p>创建并返回此对象的副本。精确的意思“复制”的类型可能取决于对象的类。一般<br>情况下，对于任何对象x，表达式为:</p>
+<pre><code>x.clone() != x
+</code></pre><font color="#DC143C">结果为true</font>
+
+<pre><code>x.clone().getClass() == x.getClass()
+</code></pre><font color="#DC143C">结果为true</font>
+
+<pre><code>x.clone().equals(x)
+</code></pre><font color="#DC143C">结果为true</font>(这个不做绝对要求)<br>由于Object本身没有实现Cloneable接口，所以不重写clone方法并且进行调用的话会发生CloneNotSupportedException异常。<br><br>#### <a href="#jump_5"><span id="jump_toString()">5.toString()</span></a><br>Object对象的默认实现，即输出类的名字@实例的哈希码的16进制<br><br>#### <a href="#jump_6"><span id="jump_notify()">6.notify()</span></a><br>notify方法是一个native方法，并且也是final的，不允许子类重写。<br><br><br>唤醒一个在此对象监视器上等待的线程(监视器相当于就是锁的概念)。如果所有的线程都在此对象上等待，那么只会选择一个线程。选择是任意性的，并在对实现做出决定时发生。一个线程在对象监视器上等待可以调用wait方法。<br><br>直到当前线程放弃对象上的锁之后，被唤醒的线程才可以继续处理。被唤醒的线程将以常规方式与在该对象上主动同步的其他所有线程进行竞争。例如，唤醒的线程在作为锁定此对象的下一个线程方面没有可靠的特权或劣势。<br><br>notify方法只能被作为此对象监视器的所有者的线程来调用。一个线程要想成为对象监视器的所有者，可以使用以下3种方法：<br><br>执行对象的同步实例方法<br>使用synchronized内置锁<br>对于Class类型的对象，执行同步静态方法<br>一次只能有一个线程拥有对象的监视器。<br><br>如果当前线程不是此对象监视器的所有者的话会抛出IllegalMonitorStateException异常<br><br>注意点：<br><br>因为notify只能在拥有对象监视器的所有者线程中调用，否则会抛出IllegalMonitorStateException异常<br><br>#### <a href="#jump_7"><span id="jump_notifyAll()">7.notifyAll()</span></a><br>跟notify()一样，唯一的区别就是会唤醒在此对象监视器上等待的所有线程，而不是一个线程。<br><br>同样，如果当前线程不是对象监视器的所有者，那么调用notifyAll同样会发生IllegalMonitorStateException异常。<br><br>#### <a href="#jump_8"><span id="jump_wait()">8.wait()</span></a><br>该方法一直等待，没有超时概念,也是一个native方法，并且是final的，不允许子类重写。<br><br>    Consumer consumer = new Consumer();<br>    consumer.wait();<br>直接调用wait方法会发生IllegalMonitorStateException异常，这是因为调用wait方法需要当前线程是对象监视器的所有者。<br><br><font color="DC143C" size="5"><strong>跟notify和notifyAll方法一样，当前线程必须是此对象的监视器所有者，否则还是会发生IllegalMonitorStateException异常。</strong></font>
+
+
+<h4 id="9-wait-long-millis"><a href="#9-wait-long-millis" class="headerlink" title="9.wait(long millis)"></a><a href="#jump_9"><span id="jump_wait(one)">9.wait(long millis)</span></a></h4><p>wait(long millis)方法会让当前线程等待直到另外一个线程调用对象的notify或notifyAll方法，或者超过参数设置的timeout超时时间。</p>
+<h4 id="10-wait-long-millis-int-nanos"><a href="#10-wait-long-millis-int-nanos" class="headerlink" title="10.wait(long millis, int nanos)"></a><a href="#jump_10"><span id="jump_wait(two)">10.wait(long millis, int nanos)</span></a></h4><p>跟wait(long timeout)方法类似，多了一个nanos参数，这个参数表示额外时间（以毫微秒为单位，范围是 0-999999）。 所以超时的时间还需要加上nanos毫秒。</p>
+<h4 id="11-finalize-1"><a href="#11-finalize-1" class="headerlink" title="11.finalize()[1]"></a><a href="#jump_11"><span id="jump_finalize()">11.finalize()</span></a>[<a href="#fn:footnote" id="fnref:footnote" title="See footnote" class="footnote">1</a>]</h4><p>方法主要涉及到GC的回收。在堆里面存放着Java世界中几乎所有的对象实例， 垃圾收集器在对堆进行回收前，第一件事情就是要确定这些对象之中哪些还“存活”着， 哪些已经“死去”（即不可能再被任何途径使用的对象）。</p>
+<ol>
+<li><p>引用计数，此时添加一个引用计数器，如果对象被引用计数+1，如果引用失效则计数-1，如果引用计数为0，则此对象不可使用。客观的讲引用计数的效率很高，也有一些比较著名的应用案例，例如微软公司的COM（Component Object Model）技术、使用ActionScript3的FlashPlayer、Python语言和在游戏脚本领域被广泛应用的Squirrel中都使用了引用计数算法进行内存管理。但是如果两个对象循环引用就可能存在问题<br> public class ReferenceCountingGC {</p>
+<p> public Object instance = null;<br> private static final int _1MB = 1024 <em> 1024;<br> /*</em></p>
+<ul>
+<li><p>这个成员属性的唯一意义就是占点内存，以便能在GC日志中看清楚是否被回收过<br><em>/<br>private static byte[] bigSize = new byte[2 </em> _1MB];</p>
+<p>public static void testGC() {<br>  ReferenceCountingGC objA = new ReferenceCountingGC();<br>  ReferenceCountingGC objB = new ReferenceCountingGC();<br>  objA.instance = objB;<br>  objB.instance = objA;<br>  objA = null;<br>  objB = null; //假设在这行发生GC,objA和objB是否能被回收？<br>  System.gc();<br>}</p>
+<p>public static void main(String[] args){<br>  testGC();<br>}</p>
+</li>
+</ul>
+</li>
+</ol>
+<p>}</p>
+<ol>
+<li>可达性分析，在主流的商用程序语言（Java、C#，甚至包括前面提到的古老的Lisp）的主流实现中，都是称通过可达性分析（ReachabilityAnalysis）来判定对象是否存活的。这个算法的基本思路就是通过一系列的<br>称为”GCRoots”的对象作为起始点，从这些节点开始向下搜索，搜索所走过的路径称为引用链（ReferenceChain），当一个对象到GCRoots没有任何引用链相连（用图论的话来说，就是从GCRoots到这个对象不可达）时，则证明此对象是不可用的。如下图所示，对象object5、object6、object7虽然互相有关联，但是它们到GCRoots是不可达的，所以它们将会被判定为是可回收的对象。<br><img src="http://bmob-cdn-12665.b0.upaiyun.com/2018/11/26/f4e571ca40b53a60808115b96b484eb9.png" alt="image"></li>
+</ol>
+<p>在Java语言中，可作为GCRoots的对象包括下面几种：</p>
+<p>虚拟机栈（栈帧中的本地变量表）中引用的对象。</p>
+<p>方法区中类静态属性引用的对象。</p>
+<p>方法区中常量引用的对象。</p>
+<p>本地方法栈中JNI（即一般说的Native方法）引用的对象。</p>
+<h5 id="对象生存还是死亡"><a href="#对象生存还是死亡" class="headerlink" title="对象生存还是死亡"></a>对象生存还是死亡</h5><p>如果对象判断为不可达，并非“非死不可”，这时候它们处于缓刑状态，而要真正的死亡需要经过两次标记，如果对象在进行可达性分析后发现没有与GCRoots相连接的引用链，那它将会被第一次标记并且进行一次筛选，筛选的条件是此对象是否有必要执行finalize()方法。当对象没有覆盖finalize()方法，或者finalize()方法已经被虚拟机调用过，虚拟机将这两种情况都视为“没有必要执行”。</p>
+<p>如果这个对象被判定为有必要执行finalize()方法，那么这个对象将会放置在一个叫做F-Queue的队列之中，并在稍后由一个由虚拟机自动建立的、低优先级的Finalizer线程去执行它。这里所谓的“执行”是指虚拟机会触发这个方法，但并不承诺会等待它运行结束，这样做的原因是，如果一个对象在finalize()方法中执行缓慢，或者发生了死循环（更极端的情况），将很可能会导致F-Queue队列中其他对象永久处于等待，甚至导致整个内存回收系统崩溃。finalize()方法是对象逃脱死亡命运的最后一次机会，稍后GC将对F-Queue中的对象进行第二次小规模的标记，如果对象要在finalize()中成功拯救自己——只要重新与引用链上的任何一个对象建立关联即可，譬如把自己（this关键字）赋值给某个类变量或者对象的成员变量，那在第二次标记时它将被移除出“即将回收”的集合；如果对象这时候还没有逃脱，那基本上它就真的被回收了。从代码清单中我们可以看到一个对象的finalize()被执行，但是它仍然可以存活。</p>
+<pre><code>public class FinalizeGC implements Cloneable{
+public static FinalizeGC finalizeGC = null;
+
+
+public void isAlive() {
+    System.out.println(&quot; yes, i am still alive:)&quot;);
+}
+
+@Override
+protected void finalize() throws Throwable {
+    super.finalize();
+    System.out.println(&quot; finalize mehtod executed!&quot;);
+    FinalizeGC.finalizeGC = this;
+}
+
+public static void main(String[] args) throws Throwable {
+    finalizeGC = new FinalizeGC();
+    //对象 第一次 成功 拯救 自己
+    finalizeGC = null;
+    System.gc();
+    //因为finalize()优先级很低，所以暂停0.5秒等待它
+    Thread.sleep(500);
+    if (finalizeGC != null) {
+        finalizeGC.isAlive();
+    } else {
+        System.out.println(&quot; no, i am dead:(&quot;);
+    }
+    //下面这段代码与上面的完全相同,但是这次自救却失败了
+    finalizeGC = null;
+    System.gc();
+    //因为finalize()优先级很低，所以暂停0.5秒以等待它
+    Thread.sleep(500);
+    if (finalizeGC != null) {
+        finalizeGC.isAlive();
+    } else {
+        System.out.println(&quot; no, i am dead:(&quot;);
+   }
+    finalizeGC.isAlive();
+ }
+}
+</code></pre><h4 id="参考文献"><a href="#参考文献" class="headerlink" title="参考文献"></a>参考文献</h4><p><li id="fn:footnote"><br>周志明. 深入理解Java虚拟机：JVM高级特性与最佳实践（第2版) 机械工业出版社. <br></li></p>
+
+      
+    </div>
+
+    <div>
       
         
-        <div class="collection-title">
-          <h2 class="archive-year motion-element" id="archive-year-2017">2017</h2>
+
+      
+    </div>
+
+    <div>
+      
+        
+  <div style="padding: 10px 0; margin: 20px auto; width: 90%; text-align: center;">
+    <div>坚持原创技术分享，您的支持将鼓励我继续创作！</div>
+    <button id="rewardButton" disable="enable" onclick="var qr = document.getElementById('QR'); if (qr.style.display === 'none') {qr.style.display='block';} else {qr.style.display='none'}">
+      <span>赏</span>
+    </button>
+    <div id="QR" style="display: none;">
+      
+        <div id="wechat" style="display: inline-block">
+          <img id="wechat_qr" src="/images/wechat-reward-image.jpg" alt="songpeng WeChat Pay"/>
+          <p>微信打赏</p>
         </div>
       
       
+        <div id="alipay" style="display: inline-block">
+          <img id="alipay_qr" src="/images/alipay-reward-image.jpg" alt="songpeng Alipay"/>
+          <p>支付宝打赏</p>
+        </div>
+      
+    </div>
+  </div>
+
 
       
+    </div>
 
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
+    <div>
+      
         
-            <a class="post-title-link" href="/2017/11/13/Android-SD卡下载的问题/" itemprop="url">
-              
-                <span itemprop="name">Android 4.4 kitkat SD卡下载地址的处理</span>
-              
-            </a>
-        
-      </h2>
 
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2017-11-13T09:45:02+08:00"
-              content="2017-11-13" >
-          11-13
-        </time>
-      </div>
+      
+    </div>
 
-    </header>
+    <footer class="post-footer">
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2018/11/19/WebView的坑/" rel="next" title="WebView的坑">
+                <i class="fa fa-chevron-left"></i> WebView的坑
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
   </article>
 
 
 
-    
-
-  </section>
-
-  
-
+    <div class="post-spread">
+      
+    </div>
+  </div>
 
 
           </div>
@@ -351,6 +614,17 @@
 
 
           
+  <div class="comments" id="comments">
+    
+      <div id="disqus_thread">
+        <noscript>
+          Please enable JavaScript to view the
+          <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a>
+        </noscript>
+      </div>
+    
+  </div>
+
 
         </div>
         
@@ -370,8 +644,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview sidebar-panel sidebar-panel-active">
+      <section class="site-overview sidebar-panel">
         <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
           <img class="site-author-image" itemprop="image"
                src="http://bmob-cdn-12665.b0.upaiyun.com/2017/07/03/db98bdb6403d17e4806da560adcf198c.png"
@@ -433,6 +716,22 @@
 
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#Object中共有11个方法"><span class="nav-text">Object中共有11个方法</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#1-equals-Object-obj"><span class="nav-text">1.equals(Object obj)</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-hashCode"><span class="nav-text">2.hashCode()</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#3-getClass"><span class="nav-text">3.getClass()</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#4-clone"><span class="nav-text">4.clone()</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#9-wait-long-millis"><span class="nav-text">9.wait(long millis)</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#10-wait-long-millis-int-nanos"><span class="nav-text">10.wait(long millis, int nanos)</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#11-finalize-1"><span class="nav-text">11.finalize()[1]</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#对象生存还是死亡"><span class="nav-text">对象生存还是死亡</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#参考文献"><span class="nav-text">参考文献</span></a></li></ol></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       
@@ -558,11 +857,9 @@
 
 
   
-  
-    <script type="text/javascript" id="motion.page.archive">
-      $('.archive-year').velocity('transition.slideLeftIn');
-    </script>
-  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.1"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.1"></script>
+
 
 
   
@@ -582,6 +879,18 @@
     
 
     
+      <script type="text/javascript">
+        var disqus_config = function () {
+          this.page.url = 'http://yoursite.com/2018/11/27/Java中Object类的方法解析/';
+          this.page.identifier = '2018/11/27/Java中Object类的方法解析/';
+          this.page.title = 'Java中Object类的方法解析';
+        };
+        var d = document, s = d.createElement('script');
+        s.src = 'https://songpeng.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', '' + +new Date());
+        (d.head || d.body).appendChild(s);
+      </script>
+    
 
   
 
@@ -595,6 +904,8 @@
 
 		_hcwp.push({widget:"Bloggerstream", widget_id: 93257, selector:".hc-comment-count", label: "{\%COUNT%\}" });
 
+		
+		_hcwp.push({widget:"Stream", widget_id: 93257, xid: "2018/11/27/Java中Object类的方法解析/"});
 		
 
 		(function() {
