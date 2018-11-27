@@ -93,17 +93,17 @@
 
 
 
-<meta name="description" content="Object中共有11个方法 equals(Object obj)) hashCode()) getClass()) clone()) toString()) notify()) notifyAll()) wait()) wait(long millis)) wait(long millis, int nanos)) finalize())//一个GC的方法  1.equals(Object ob">
+<meta name="description" content="Object中共有11个方法 equals(Object obj) hashCode() getClass() clone() toString() notify() notifyAll() wait() wait(long millis) wait(long millis, int nanos) finalize()//一个GC的方法  1.equals(Object obj)equals()方">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Java中Object类的方法解析">
 <meta property="og:url" content="http://yoursite.com/2018/11/27/Java中Object类的方法解析/index.html">
 <meta property="og:site_name" content="像风一样自由">
-<meta property="og:description" content="Object中共有11个方法 equals(Object obj)) hashCode()) getClass()) clone()) toString()) notify()) notifyAll()) wait()) wait(long millis)) wait(long millis, int nanos)) finalize())//一个GC的方法  1.equals(Object ob">
+<meta property="og:description" content="Object中共有11个方法 equals(Object obj) hashCode() getClass() clone() toString() notify() notifyAll() wait() wait(long millis) wait(long millis, int nanos) finalize()//一个GC的方法  1.equals(Object obj)equals()方">
 <meta property="og:image" content="http://bmob-cdn-12665.b0.upaiyun.com/2018/11/26/f4e571ca40b53a60808115b96b484eb9.png">
-<meta property="og:updated_time" content="2018-11-27T06:51:09.080Z">
+<meta property="og:updated_time" content="2018-11-27T08:10:18.972Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Java中Object类的方法解析">
-<meta name="twitter:description" content="Object中共有11个方法 equals(Object obj)) hashCode()) getClass()) clone()) toString()) notify()) notifyAll()) wait()) wait(long millis)) wait(long millis, int nanos)) finalize())//一个GC的方法  1.equals(Object ob">
+<meta name="twitter:description" content="Object中共有11个方法 equals(Object obj) hashCode() getClass() clone() toString() notify() notifyAll() wait() wait(long millis) wait(long millis, int nanos) finalize()//一个GC的方法  1.equals(Object obj)equals()方">
 <meta name="twitter:image" content="http://bmob-cdn-12665.b0.upaiyun.com/2018/11/26/f4e571ca40b53a60808115b96b484eb9.png">
 
 
@@ -329,7 +329,7 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-11-27T14:48:36+08:00">
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-11-27T14:48:00+08:00">
                 2018-11-27
               </time>
             
@@ -387,19 +387,19 @@
 
       
         <h3 id="Object中共有11个方法"><a href="#Object中共有11个方法" class="headerlink" title="Object中共有11个方法"></a>Object中共有11个方法</h3><ul>
-<li><span id="jump_1"><a href="#jump_equals(">equals(Object obj)</a>)</span></li>
-<li><span id="jump_2"><a href="#jump_hashCode(">hashCode()</a>)</span></li>
-<li><span id="jump_3"><a href="#jump_getClass(">getClass()</a>)</span></li>
-<li><span id="jump_4"><a href="#jump_clone(">clone()</a>)</span></li>
-<li><span id="jump_5"><a href="#jump_toString(">toString()</a>)</span></li>
-<li><span id="jump_6"><a href="#jump_notify(">notify()</a>)</span></li>
-<li><span id="jump_7"><a href="#jump_notifyAll(">notifyAll()</a>)</span></li>
-<li><span id="jump_8"><a href="#jump_wait(">wait()</a>)</span></li>
-<li><span id="jump_9"><a href="#jump_wait(one">wait(long millis)</a>)</span></li>
-<li><span id="jump_10"><a href="#jump_wait(two">wait(long millis, int nanos)</a>)</span></li>
-<li><span id="jump_11"><a href="#jump_finalize(">finalize()</a>)</span>//一个GC的方法</li>
+<li><span id="jump_1"><a href="#jump_equals">equals(Object obj)</a></span></li>
+<li><span id="jump_2"><a href="#jump_hashCode">hashCode()</a></span></li>
+<li><span id="jump_3"><a href="#jump_getClass">getClass()</a></span></li>
+<li><span id="jump_4"><a href="#jump_clone">clone()</a></span></li>
+<li><span id="jump_5"><a href="#jump_toString">toString()</a></span></li>
+<li><span id="jump_6"><a href="#jump_notify">notify()</a></span></li>
+<li><span id="jump_7"><a href="#jump_notifyAll">notifyAll()</a></span></li>
+<li><span id="jump_8"><a href="#jump_wait">wait()</a></span></li>
+<li><span id="jump_9"><a href="#jump_wait_1">wait(long millis)</a></span></li>
+<li><span id="jump_10"><a href="#jump_wait_2">wait(long millis, int nanos)</a></span></li>
+<li><span id="jump_11"><a href="#jump_finalize">finalize()</a></span>//一个GC的方法</li>
 </ul>
-<h4 id="1-equals-Object-obj"><a href="#1-equals-Object-obj" class="headerlink" title="1.equals(Object obj)"></a><a href="#jump_1"><span id="jump_equals()">1.equals(Object obj)</span></a></h4><p>equals()方法主要用来比对两个对象是否相等，但是在Object中的实现是比较内存地址是否相等，而在在String、Integer中被进行了重写。</p>
+<h4 id="1-equals-Object-obj"><a href="#1-equals-Object-obj" class="headerlink" title="1.equals(Object obj)"></a><a href="#jump_1"><span id="jump_equals">1.equals(Object obj)</span></a></h4><p>equals()方法主要用来比对两个对象是否相等，但是在Object中的实现是比较内存地址是否相等，而在在String、Integer中被进行了重写。</p>
 <p>Object中</p>
 <pre><code>public boolean equals(Object obj) {
     return (this == obj);
@@ -424,7 +424,7 @@
     }
     return false;
 }
-</code></pre><h4 id="2-hashCode"><a href="#2-hashCode" class="headerlink" title="2.hashCode()"></a><a href="#jump_2"><span id="jump_hashCode()">2.hashCode()</span></a></h4><p>hashCode()方法是native方法</p>
+</code></pre><h4 id="2-hashCode"><a href="#2-hashCode" class="headerlink" title="2.hashCode()"></a><a href="#jump_2"><span id="jump_hashCode">2.hashCode()</span></a></h4><p>hashCode()方法是native方法</p>
 <p>hashCode()方法主要用来获取对象的哈希值，可以用在HashMap中</p>
 <ul>
 <li>在java程序执行过程中，在一个对象没有被改变的前提下，无论这个对象被调用多少次，hashCode方法都会返回相同的整数值。对象的哈希码没有必要在不同的程序中保持相同的值。</li>
@@ -445,10 +445,10 @@
 }
 </code></pre><p>比如”zg”的hashCode = 122<em>31^1 + 103 = 3885， “zgjy”的hashCode = 122</em>31^3 + 103 <em> 31^2 + 106 </em> 31^1+ 121 = 3736892 (‘z’的ascii码为122,’g’的ascii为103，’j’的ascii码为106，’y’的ascii码为121)</p>
 <p><strong>如果2个对象的equals方法相等，那么他们的hashCode值也必须相等，反之，如果2个对象hashCode值相等，但是equals不相等，这样会影响性能，所以还是建议2个方法都一起重写。</strong></p>
-<h4 id="3-getClass"><a href="#3-getClass" class="headerlink" title="3.getClass()"></a><a href="#jump_3"><span id="jump_getClass()">3.getClass()</span></a></h4><p>getClass()是一个final方法，不允许子类重写，并且也是一个native方法。<br>返回当前运行时对象的Class对象，注意这里是运行时，比如以下代码中n是一个Number类型的实例，但是java中数值默认是Integer类型，所以getClass方法返回的是java.lang.Integer：</p>
+<h4 id="3-getClass"><a href="#3-getClass" class="headerlink" title="3.getClass()"></a><a href="#jump_3"><span id="jump_getClass">3.getClass()</span></a></h4><p>getClass()是一个final方法，不允许子类重写，并且也是一个native方法。<br>返回当前运行时对象的Class对象，注意这里是运行时，比如以下代码中n是一个Number类型的实例，但是java中数值默认是Integer类型，所以getClass方法返回的是java.lang.Integer：</p>
 <pre><code>Number n = 0;
 Class&lt;? extends Number&gt; c= n.getClass();//java.lang.Integer
-</code></pre><h4 id="4-clone"><a href="#4-clone" class="headerlink" title="4.clone()"></a><a href="#jump_4"><span id="jump_clone()">4.clone()</span></a></h4><p>创建并返回此对象的副本。精确的意思“复制”的类型可能取决于对象的类。一般<br>情况下，对于任何对象x，表达式为:</p>
+</code></pre><h4 id="4-clone"><a href="#4-clone" class="headerlink" title="4.clone()"></a><a href="#jump_4"><span id="jump_clone">4.clone()</span></a></h4><p>创建并返回此对象的副本。精确的意思“复制”的类型可能取决于对象的类。一般<br>情况下，对于任何对象x，表达式为:</p>
 <pre><code>x.clone() != x
 </code></pre><font color="#DC143C">结果为true</font>
 
@@ -456,12 +456,29 @@ Class&lt;? extends Number&gt; c= n.getClass();//java.lang.Integer
 </code></pre><font color="#DC143C">结果为true</font>
 
 <pre><code>x.clone().equals(x)
-</code></pre><font color="#DC143C">结果为true</font>(这个不做绝对要求)<br>由于Object本身没有实现Cloneable接口，所以不重写clone方法并且进行调用的话会发生CloneNotSupportedException异常。<br><br>#### <a href="#jump_5"><span id="jump_toString()">5.toString()</span></a><br>Object对象的默认实现，即输出类的名字@实例的哈希码的16进制<br><br>#### <a href="#jump_6"><span id="jump_notify()">6.notify()</span></a><br>notify方法是一个native方法，并且也是final的，不允许子类重写。<br><br><br>唤醒一个在此对象监视器上等待的线程(监视器相当于就是锁的概念)。如果所有的线程都在此对象上等待，那么只会选择一个线程。选择是任意性的，并在对实现做出决定时发生。一个线程在对象监视器上等待可以调用wait方法。<br><br>直到当前线程放弃对象上的锁之后，被唤醒的线程才可以继续处理。被唤醒的线程将以常规方式与在该对象上主动同步的其他所有线程进行竞争。例如，唤醒的线程在作为锁定此对象的下一个线程方面没有可靠的特权或劣势。<br><br>notify方法只能被作为此对象监视器的所有者的线程来调用。一个线程要想成为对象监视器的所有者，可以使用以下3种方法：<br><br>执行对象的同步实例方法<br>使用synchronized内置锁<br>对于Class类型的对象，执行同步静态方法<br>一次只能有一个线程拥有对象的监视器。<br><br>如果当前线程不是此对象监视器的所有者的话会抛出IllegalMonitorStateException异常<br><br>注意点：<br><br>因为notify只能在拥有对象监视器的所有者线程中调用，否则会抛出IllegalMonitorStateException异常<br><br>#### <a href="#jump_7"><span id="jump_notifyAll()">7.notifyAll()</span></a><br>跟notify()一样，唯一的区别就是会唤醒在此对象监视器上等待的所有线程，而不是一个线程。<br><br>同样，如果当前线程不是对象监视器的所有者，那么调用notifyAll同样会发生IllegalMonitorStateException异常。<br><br>#### <a href="#jump_8"><span id="jump_wait()">8.wait()</span></a><br>该方法一直等待，没有超时概念,也是一个native方法，并且是final的，不允许子类重写。<br><br>    Consumer consumer = new Consumer();<br>    consumer.wait();<br>直接调用wait方法会发生IllegalMonitorStateException异常，这是因为调用wait方法需要当前线程是对象监视器的所有者。<br><br><font color="DC143C" size="5"><strong>跟notify和notifyAll方法一样，当前线程必须是此对象的监视器所有者，否则还是会发生IllegalMonitorStateException异常。</strong></font>
+</code></pre><p>结果为true (这个不做绝对要求)</p>
+<p>由于Object本身没有实现Cloneable接口，所以不重写clone方法并且进行调用的话会发生CloneNotSupportedException异常。</p>
+<h4 id="5-toString"><a href="#5-toString" class="headerlink" title="5.toString()"></a><a href="#jump_5"><span id="jump_toString">5.toString()</span></a></h4><p>Object对象的默认实现，即输出类的名字@实例的哈希码的16进制。</p>
+<h4 id="6-notify"><a href="#6-notify" class="headerlink" title="6.notify()"></a><a href="#jump_6"><span id="jump_notify">6.notify()</span></a></h4><p>notify方法是一个native方法，并且也是final的，不允许子类重写。</p>
+<p>唤醒一个在此对象监视器上等待的线程(监视器相当于就是锁的概念)。如果所有的线程都在此对象上等待，那么只会选择一个线程。选择是任意性的，并在对实现做出决定时发生。一个线程在对象监视器上等待可以调用wait方法。</p>
+<p>直到当前线程放弃对象上的锁之后，被唤醒的线程才可以继续处理。被唤醒的线程将以常规方式与在该对象上主动同步的其他所有线程进行竞争。例如，唤醒的线程在作为锁定此对象的下一个线程方面没有可靠的特权或劣势。</p>
+<p>notify方法只能被作为此对象监视器的所有者的线程来调用。一个线程要想成为对象监视器的所有者，可以使用以下3种方法：</p>
+<p>执行对象的同步实例方法<br>使用synchronized内置锁<br>对于Class类型的对象，执行同步静态方法<br>一次只能有一个线程拥有对象的监视器。</p>
+<p>如果当前线程不是此对象监视器的所有者的话会抛出IllegalMonitorStateException异常</p>
+<p>注意点：</p>
+<p>因为notify只能在拥有对象监视器的所有者线程中调用，否则会抛出IllegalMonitorStateException异常</p>
+<h4 id="7-notifyAll"><a href="#7-notifyAll" class="headerlink" title="7.notifyAll()"></a><a href="#jump_7"><span id="jump_notifyAll">7.notifyAll()</span></a></h4><p>跟notify()一样，唯一的区别就是会唤醒在此对象监视器上等待的所有线程，而不是一个线程。</p>
+<p>同样，如果当前线程不是对象监视器的所有者，那么调用notifyAll同样会发生IllegalMonitorStateException异常。</p>
+<h4 id="8-wait"><a href="#8-wait" class="headerlink" title="8.wait()"></a><a href="#jump_8"><span id="jump_wait">8.wait()</span></a></h4><p>该方法一直等待，没有超时概念,也是一个native方法，并且是final的，不允许子类重写。</p>
+<pre><code>Consumer consumer = new Consumer();
+consumer.wait();
+</code></pre><p>直接调用wait方法会发生IllegalMonitorStateException异常，这是因为调用wait方法需要当前线程是对象监视器的所有者。</p>
+<font color="DC143C" size="5"><strong>跟notify和notifyAll方法一样，当前线程必须是此对象的监视器所有者，否则还是会发生IllegalMonitorStateException异常。</strong></font>
 
 
-<h4 id="9-wait-long-millis"><a href="#9-wait-long-millis" class="headerlink" title="9.wait(long millis)"></a><a href="#jump_9"><span id="jump_wait(one)">9.wait(long millis)</span></a></h4><p>wait(long millis)方法会让当前线程等待直到另外一个线程调用对象的notify或notifyAll方法，或者超过参数设置的timeout超时时间。</p>
-<h4 id="10-wait-long-millis-int-nanos"><a href="#10-wait-long-millis-int-nanos" class="headerlink" title="10.wait(long millis, int nanos)"></a><a href="#jump_10"><span id="jump_wait(two)">10.wait(long millis, int nanos)</span></a></h4><p>跟wait(long timeout)方法类似，多了一个nanos参数，这个参数表示额外时间（以毫微秒为单位，范围是 0-999999）。 所以超时的时间还需要加上nanos毫秒。</p>
-<h4 id="11-finalize-1"><a href="#11-finalize-1" class="headerlink" title="11.finalize()[1]"></a><a href="#jump_11"><span id="jump_finalize()">11.finalize()</span></a>[<a href="#fn:footnote" id="fnref:footnote" title="See footnote" class="footnote">1</a>]</h4><p>方法主要涉及到GC的回收。在堆里面存放着Java世界中几乎所有的对象实例， 垃圾收集器在对堆进行回收前，第一件事情就是要确定这些对象之中哪些还“存活”着， 哪些已经“死去”（即不可能再被任何途径使用的对象）。</p>
+<h4 id="9-wait-long-millis"><a href="#9-wait-long-millis" class="headerlink" title="9.wait(long millis)"></a><a href="#jump_9"><span id="jump_wait_1">9.wait(long millis)</span></a></h4><p>wait(long millis)方法会让当前线程等待直到另外一个线程调用对象的notify或notifyAll方法，或者超过参数设置的timeout超时时间。</p>
+<h4 id="10-wait-long-millis-int-nanos"><a href="#10-wait-long-millis-int-nanos" class="headerlink" title="10.wait(long millis, int nanos)"></a><a href="#jump_10"><span id="jump_wait_2">10.wait(long millis, int nanos)</span></a></h4><p>跟wait(long timeout)方法类似，多了一个nanos参数，这个参数表示额外时间（以毫微秒为单位，范围是 0-999999）。 所以超时的时间还需要加上nanos毫秒。</p>
+<h4 id="11-finalize-1"><a href="#11-finalize-1" class="headerlink" title="11.finalize()[1]"></a><a href="#jump_11"><span id="jump_finalize">11.finalize()</span></a>[<a href="#fn:footnote" id="fnref:footnote" title="See footnote" class="footnote">1</a>]</h4><p>方法主要涉及到GC的回收。在堆里面存放着Java世界中几乎所有的对象实例， 垃圾收集器在对堆进行回收前，第一件事情就是要确定这些对象之中哪些还“存活”着， 哪些已经“死去”（即不可能再被任何途径使用的对象）。</p>
 <ol>
 <li><p>引用计数，此时添加一个引用计数器，如果对象被引用计数+1，如果引用失效则计数-1，如果引用计数为0，则此对象不可使用。客观的讲引用计数的效率很高，也有一些比较著名的应用案例，例如微软公司的COM（Component Object Model）技术、使用ActionScript3的FlashPlayer、Python语言和在游戏脚本领域被广泛应用的Squirrel中都使用了引用计数算法进行内存管理。但是如果两个对象循环引用就可能存在问题<br> public class ReferenceCountingGC {</p>
 <p> public Object instance = null;<br> private static final int _1MB = 1024 <em> 1024;<br> /*</em></p>
@@ -726,7 +743,7 @@ public static void main(String[] args) throws Throwable {
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#Object中共有11个方法"><span class="nav-text">Object中共有11个方法</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#1-equals-Object-obj"><span class="nav-text">1.equals(Object obj)</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-hashCode"><span class="nav-text">2.hashCode()</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#3-getClass"><span class="nav-text">3.getClass()</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#4-clone"><span class="nav-text">4.clone()</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#9-wait-long-millis"><span class="nav-text">9.wait(long millis)</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#10-wait-long-millis-int-nanos"><span class="nav-text">10.wait(long millis, int nanos)</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#11-finalize-1"><span class="nav-text">11.finalize()[1]</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#对象生存还是死亡"><span class="nav-text">对象生存还是死亡</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#参考文献"><span class="nav-text">参考文献</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#Object中共有11个方法"><span class="nav-text">Object中共有11个方法</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#1-equals-Object-obj"><span class="nav-text">1.equals(Object obj)</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-hashCode"><span class="nav-text">2.hashCode()</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#3-getClass"><span class="nav-text">3.getClass()</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#4-clone"><span class="nav-text">4.clone()</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#5-toString"><span class="nav-text">5.toString()</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#6-notify"><span class="nav-text">6.notify()</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#7-notifyAll"><span class="nav-text">7.notifyAll()</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#8-wait"><span class="nav-text">8.wait()</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#9-wait-long-millis"><span class="nav-text">9.wait(long millis)</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#10-wait-long-millis-int-nanos"><span class="nav-text">10.wait(long millis, int nanos)</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#11-finalize-1"><span class="nav-text">11.finalize()[1]</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#对象生存还是死亡"><span class="nav-text">对象生存还是死亡</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#参考文献"><span class="nav-text">参考文献</span></a></li></ol></li></ol></div>
             
 
           </div>
